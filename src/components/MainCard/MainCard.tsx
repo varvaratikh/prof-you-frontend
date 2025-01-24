@@ -54,7 +54,7 @@ const MainCard: React.FC = () => {
                     ) : (
                         <div>
                             <img src={photo} alt="Снимок" className="image-section__photo" />
-                            <button onClick={() => setPhoto(null)} className="button">Снять ещё</button>
+                            <button onClick={() => setPhoto(null)} className="button_photo">Снять ещё</button>
                         </div>
                     )}
                     <canvas ref={canvasRef} style={{ display: 'none' }}></canvas>
