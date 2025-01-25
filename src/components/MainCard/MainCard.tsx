@@ -43,7 +43,12 @@ const MainCard: React.FC = () => {
             <div className="image">
                 <Back />
             </div>
-            <div className="logo"><span className="logo__wh">Proff</span>You</div>
+            <div className="logo">
+                <span className="logo__wh">
+                    Proff
+                </span>
+                You
+            </div>
             <div className="main-card">
                 <div className="image-section">
                     {!photo ? (
