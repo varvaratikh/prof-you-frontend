@@ -59,21 +59,22 @@ const MainCard: React.FC = () => {
                     ) : (
                         <div>
                             <img src={photo} alt="Снимок" className="image-section__photo" />
-                            <button onClick={() => setPhoto(null)} className="button_photo">Снять ещё</button>
+                            <button onClick={() => setPhoto(null)} className="button_photo_2">Снять ещё</button>
                         </div>
                     )}
                     <canvas ref={canvasRef} style={{ display: 'none' }}></canvas>
                 </div>
+
                 <div className="text-section">
                     <h2 className="text-section__title">УЛЫБНИТЕСЬ ПОШИРЕ!</h2>
                     <p className="text-section__description">
-                        Мы сфотографируем вас, чтобы определить вашу профессию :)
+                        Мы сфотографируем вас,чтобы определить вашу профессию :)
                     </p>
                     <p className="text-section__note">
                         *Ваше фото не будет сохранено или использовано в каких-либо целях. Все данные конфиденциальны и автоматически удаляются после генерации ответа.
                     </p>
+                    <button className="button button-ready">ГОТОВО!</button>
                 </div>
-                <button className="button button-ready">ГОТОВО!</button>
             </div>
         </div>
     );

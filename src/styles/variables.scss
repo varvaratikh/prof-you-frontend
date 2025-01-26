@@ -1,7 +1,15 @@
-:root{
-  --box_shadow: rgba(0, 0, 0, 0.1);
-  --white: #FFFFFF;
-  --grey: #CCCCCC;
-  --balck: #000;
-  --green_button: #00FF6A;
+:root {
+  --primary-bg-color: #121212;
+  --secondary-bg-color: rgba(29, 29, 29, 0.9);
+  --button-bg-color: #00FF6A;
+  --button-text-color: #000;
+  --text-color: #FFFFFF;
+  --note-text-color: #CCCCCC;
+  --font-size-title: 30px;
+  --font-size-body: 16px;
+  --font-size-note: 12px;
+  --font-weight-bold: bold;
+  --border-radius: 15px;
+  --box-shadow: 0px 10px 16.4px rgba(0, 0, 0, 0.64);
+  --button-shadow: 0px 8px 13.2px rgba(0, 0, 0, 0.25);
 }
