@@ -1,11 +1,13 @@
 import React, { useRef, useEffect, useState } from 'react';
 import './ MainCard.scss';
 import {Back} from "../../images/Back";
+import {useNavigate} from "react-router-dom";
 
 const MainCard: React.FC = () => {
     const videoRef = useRef<HTMLVideoElement | null>(null);
     const canvasRef = useRef<HTMLCanvasElement | null>(null);
     const [photo, setPhoto] = useState<string | null>(null);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const startCamera = async () => {
@@ -36,6 +38,10 @@ const MainCard: React.FC = () => {
                 setPhoto(imageData);
             }
         }
+    };
+
+    const handleReadyClick = () => {
+        navigate('/chat');
     };
 
     return (
@@ -73,7 +79,7 @@ const MainCard: React.FC = () => {
                     <p className="text-section__note">
                         *Ваше фото не будет сохранено или использовано в каких-либо целях. Все данные конфиденциальны и автоматически удаляются после генерации ответа.
                     </p>
-                    <button className="button button-ready">ГОТОВО!</button>
+                    <button onClick={handleReadyClick} className="button button-ready">ГОТОВО!</button>
                 </div>
             </div>
         </div>
