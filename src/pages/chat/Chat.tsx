@@ -1,6 +1,7 @@
 import {Back} from "../../images/Back";
 import React from "react";
-import {ChatForm} from "../../components/ChatForm/ChatForm";
+import { ChatForm } from "../../components/ChatForm/ChatForm";
+import './chat.scss'
 
 export const Chat = () => {
     return(
