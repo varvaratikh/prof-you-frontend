@@ -38,73 +38,73 @@
 //  backdrop-filter: blur(20px);
 //}
 //
-//.test_text {
-//  font-family: 'Dela Gothic One', serif;
-//  font-size: 36px;
-//  color: #FFFFFF;
-//  margin-bottom: 20px;
-//}
-//
-//.chat-box {
-//  background: #1E1E1E;
-//  padding: 15px;
-//  border-radius: 10px;
-//  width: 80%;
-//  max-width: 600px;
-//  height: 300px;
-//  overflow-y: auto;
-//}
-//
-//.message {
-//  padding: 10px;
-//  border-radius: 10px;
-//  margin: 5px 0;
-//  color: white;
-//}
-//
-//.received {
-//  background: #333;
-//  align-self: flex-start;
-//}
-//
-//.sent {
-//  background: #0078FF;
-//  align-self: flex-end;
-//}
-//
-//.chat-input {
-//  width: calc(100% - 20px);
-//  padding: 10px;
-//  margin-top: 10px;
-//  border-radius: 5px;
-//  border: none;
-//}
-//
-//.photo-analysis {
-//  display: flex;
-//  flex-direction: column;
-//  align-items: center;
-//  margin-top: 20px;
-//}
-//
-//.photo {
-//  width: 100px;
-//  height: 100px;
-//  border-radius: 10px;
-//}
-//
-//.progress-bar {
-//  background: #00FF00;
-//  padding: 5px;
-//  border-radius: 5px;
-//  margin-top: 10px;
-//}
-//
-//.ready-button {
-//  background: #00FF00;
-//  padding: 10px 20px;
-//  font-size: 20px;
-//  border-radius: 10px;
-//  margin-top: 20px;
-//  cursor: pointer;
-//}
+.test_text {
+  font-family: 'Dela Gothic One', serif;
+  font-size: 36px;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+}
+
+.chat-box {
+  background: #1E1E1E;
+  padding: 15px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 600px;
+  height: 300px;
+  overflow-y: auto;
+}
+
+.message {
+  padding: 10px;
+  border-radius: 10px;
+  margin: 5px 0;
+  color: white;
+}
+
+.received {
+  background: #333;
+  align-self: flex-start;
+}
+
+.sent {
+  background: #0078FF;
+  align-self: flex-end;
+}
+
+.chat-input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+.photo-analysis {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+}
+
+.progress-bar {
+  background: #00FF00;
+  padding: 5px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.ready-button {
+  background: #00FF00;
+  padding: 10px 20px;
+  font-size: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+}
