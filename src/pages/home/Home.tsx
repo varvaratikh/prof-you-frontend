@@ -1,7 +1,8 @@
 import MainCard from "../../components/MainCard/MainCard";
 
 const Home: React.FC = () => {
-    return <MainCard/>;
+
+    return <MainCard />;
 };
 
 export default Home;

@@ -1,91 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('/src/styles/variables.scss');
 
-//.shape{
-//  display: flex;
-//  align-items: center;
-//  justify-content: center;
-//  background: rgba(29, 29, 29, 0.9);
-//  padding: 40px;
-//  border-radius: 15px;
-//  box-shadow: 0px 10px 16.4px rgba(0, 0, 0, 0.64);
-//  max-width: 1200px;
-//  z-index: 1;
-//  backdrop-filter: blur(20px);
-//}
-//
-//.test_text {
-//  font-family: 'Dela Gothic One', serif;
-//  font-size: 36px;
-//  color: #FFFFFF;
-//  margin-top: -10px;
-//}
-//
-//.chat-box {
-//  background: #1E1E1E;
-//  padding: 15px;
-//  border-radius: 10px;
-//  width: 80%;
-//  max-width: 600px;
-//  height: 300px;
-//  overflow-y: auto;
-//}
-//
-//.message {
-//  padding: 10px;
-//  border-radius: 10px;
-//  margin: 5px 0;
-//  color: white;
-//}
-//
-//.received {
-//  background: #333;
-//  align-self: flex-start;
-//}
-//
-//.sent {
-//  background: #0078FF;
-//  align-self: flex-end;
-//}
-//
-//.chat-input {
-//  width: calc(100% - 20px);
-//  padding: 10px;
-//  margin-top: 10px;
-//  border-radius: 5px;
-//  border: none;
-//}
-//
-//.photo-analysis {
-//  display: flex;
-//  flex-direction: column;
-//  align-items: center;
-//  margin-top: 20px;
-//}
-//
-//.photo {
-//  width: 100px;
-//  height: 100px;
-//  border-radius: 10px;
-//}
-//
-//.progress-bar {
-//  background: #00FF00;
-//  padding: 5px;
-//  border-radius: 5px;
-//  margin-top: 10px;
-//}
-//
-//.ready-button {
-//  background: #00FF00;
-//  padding: 10px 20px;
-//  font-size: 20px;
-//  border-radius: 10px;
-//  margin-top: 20px;
-//  cursor: pointer;
-//}
-
-
 .container {
   display: flex;
   flex-direction: column;
@@ -95,7 +10,7 @@
   padding: 40px;
   border-radius: 15px;
   box-shadow: 0px 10px 16.4px rgba(0, 0, 0, 0.64);
-  max-width: 1200px;
+  max-width: 1100px;
   z-index: 1;
   backdrop-filter: blur(20px);
 }
@@ -104,8 +19,7 @@
   font-family: 'Dela Gothic One', serif;
   font-size: 36px;
   color: #FFFFFF;
-  margin-bottom: 20px;
-  text-align: center;
+  margin-top: -20px;
 }
 
 .content-wrapper {
@@ -115,11 +29,13 @@
 }
 
 .chat-box {
-  background: #1E1E1E;
-  padding: 15px;
+  background: rgba(29, 29, 29, 0.5);
+  box-shadow: inset -3px 4px 14.4px 1px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(51.05px);
+  padding: 30px;
   border-radius: 10px;
-  width: 70%;
-  max-width: 600px;
+  width: 75%;
+  //max-width: 600px;
   height: 300px;
   overflow-y: auto;
   display: flex;
@@ -183,18 +99,29 @@
 }
 
 .testSm_text {
-  font-size: 14px;
-  color: #FFFFFF;
   margin-top: 20px;
-  text-align: center;
+  width: 643px;
+  height: 54px;
+  font-family: 'Inter', serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  color: #FFFFFF;
+  margin-right: 430px;
 }
 
 .ready-btn {
-  background: #00FF00;
-  padding: 10px 20px;
-  font-size: 20px;
-  border-radius: 10px;
   margin-top: 20px;
   cursor: pointer;
   border: none;
+  width: 375px;
+  background: var(--button-bg-color);
+  box-shadow: 0px 8px 13.2px rgba(0, 0, 0, 0.25);
+  border-radius: 21px;
+  font-weight: var(--font-weight-bold);
+  color: var(--button-text-color);
+  font-size: 1.5rem;
+  font-family: 'Dela Gothic One', serif;
+  padding: 20px 30px;
+  margin-left: auto;
 }

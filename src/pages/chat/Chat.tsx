@@ -1,9 +1,9 @@
 import {Back} from "../../images/Back";
-import React from "react";
 import { ChatForm } from "../../components/ChatForm/ChatForm";
 import './chat.scss'
 
 export const Chat = () => {
+
     return(
         <div>
             <div className="image">
@@ -15,7 +15,7 @@ export const Chat = () => {
                 </span>
                 You
             </div>
-            <ChatForm/>
+            <ChatForm />
         </div>
     )
 }

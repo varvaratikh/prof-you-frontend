@@ -1,13 +1,14 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useEffect } from 'react';
 import './ MainCard.scss';
-import {Back} from "../../images/Back";
-import {useNavigate} from "react-router-dom";
+import { Back } from "../../images/Back";
+import { useNavigate } from "react-router-dom";
+import { usePhoto } from "../../context/PhotoContext";
 
-const MainCard: React.FC = () => {
+const MainCard = () => {
     const videoRef = useRef<HTMLVideoElement | null>(null);
     const canvasRef = useRef<HTMLCanvasElement | null>(null);
-    const [photo, setPhoto] = useState<string | null>(null);
     const navigate = useNavigate();
+    const { photo, setPhoto } = usePhoto();
 
     useEffect(() => {
         const startCamera = async () => {
@@ -26,7 +27,6 @@ const MainCard: React.FC = () => {
         startCamera();
     }, []);
 
-
     const takePhoto = () => {
         if (canvasRef.current && videoRef.current) {
             const context = canvasRef.current.getContext('2d');
@@ -35,7 +35,7 @@ const MainCard: React.FC = () => {
                 canvasRef.current.height = videoRef.current.videoHeight;
                 context.drawImage(videoRef.current, 0, 0, canvasRef.current.width, canvasRef.current.height);
                 const imageData = canvasRef.current.toDataURL('image/png');
-                setPhoto(imageData);
+                setPhoto(imageData);  // Устанавливаем фото в контексте
             }
         }
     };
@@ -74,7 +74,7 @@ const MainCard: React.FC = () => {
                 <div className="text-section">
                     <h2 className="text-section__title">УЛЫБНИТЕСЬ ПОШИРЕ!</h2>
                     <p className="text-section__description">
-                        Мы сфотографируем вас,чтобы определить вашу профессию :)
+                        Мы сфотографируем вас, чтобы определить вашу профессию :)
                     </p>
                     <p className="text-section__note">
                         *Ваше фото не будет сохранено или использовано в каких-либо целях. Все данные конфиденциальны и автоматически удаляются после генерации ответа.
