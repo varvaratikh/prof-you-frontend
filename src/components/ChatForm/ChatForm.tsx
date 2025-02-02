@@ -2,6 +2,7 @@ import './chatForm.scss';
 import { useState } from 'react';
 import { Send } from 'lucide-react';
 import {usePhoto} from "../../context/PhotoContext";
+import {ProgressBar} from "../ProgressBar/ProgressBar";
 
 export const ChatForm = () => {
     const { photo } = usePhoto();
@@ -44,7 +45,7 @@ export const ChatForm = () => {
                     ) : (
                         <div className="photo" />
                     )}
-                    <div className="progress-bar">10%</div>
+                    <ProgressBar progress={10}/>
                 </div>
             </div>
             <div className="test-footer">

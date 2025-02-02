@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Dela+Gothic+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('/src/styles/variables.scss');
+
+.progress-container {
+  width: 320px;
+  height: 50px;
+  background-color: #333;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  margin-top: 10px;
+}
+
+.progress-bar {
+  background-color: var(--button-bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: width 0.3s ease-in-out;
+  font-family: 'ADLaM Display', serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  color: #000000;
+  margin-top: 1.8px;
+  border-radius: 20px;
+}
