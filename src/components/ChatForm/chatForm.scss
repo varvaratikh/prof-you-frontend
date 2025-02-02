@@ -98,6 +98,14 @@
   text-align: center;
 }
 
+.test-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
 .testSm_text {
   margin-top: 20px;
   width: 643px;
@@ -107,7 +115,6 @@
   font-size: 15px;
   line-height: 18px;
   color: #FFFFFF;
-  margin-right: 430px;
 }
 
 .ready-btn {
