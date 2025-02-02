@@ -35,7 +35,7 @@ const MainCard = () => {
                 canvasRef.current.height = videoRef.current.videoHeight;
                 context.drawImage(videoRef.current, 0, 0, canvasRef.current.width, canvasRef.current.height);
                 const imageData = canvasRef.current.toDataURL('image/png');
-                setPhoto(imageData);  // Устанавливаем фото в контексте
+                setPhoto(imageData);
             }
         }
     };
