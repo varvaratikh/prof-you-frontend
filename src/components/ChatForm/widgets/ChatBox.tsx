@@ -24,13 +24,15 @@ export const ChatBox = () => {
 
     return(
         <div className="chat-box">
-            {messages.map(msg => (
-                <div key={msg.id} className={`message-wrapper ${msg.sender}`}>
-                    {msg.sender === 'bot' && <img src={msg.avatar} alt="bot" className="avatar" />}
-                    <div className={`message ${msg.sender === 'bot' ? 'received' : 'sent'}`}>{msg.text}</div>
-                    {msg.sender === 'user' && <img src={msg.avatar} alt="user" className="avatar" />}
-                </div>
-            ))}
+            <div className="messages-container">
+                {messages.map(msg => (
+                    <div key={msg.id} className={`message-wrapper ${msg.sender}`}>
+                        {msg.sender === 'bot' && <img src={msg.avatar} alt="bot" className="avatar" />}
+                        <div className={`message ${msg.sender === 'bot' ? 'received' : 'sent'}`}>{msg.text}</div>
+                        {msg.sender === 'user' && <img src={msg.avatar} alt="user" className="avatar" />}
+                    </div>
+                ))}
+            </div>
             <div className="input-container">
                 <input
                     type="text"
@@ -39,7 +41,9 @@ export const ChatBox = () => {
                     placeholder="Write a message"
                     className="chat-input"
                 />
-                <button onClick={handleSend}><Send size={20} /></button>
+                <button onClick={handleSend}>
+                    <Send size={20} />
+                </button>
             </div>
         </div>
     )
