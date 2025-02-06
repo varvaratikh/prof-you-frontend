@@ -2,9 +2,15 @@ import './chatForm.scss';
 import {usePhoto} from "../../context/PhotoContext";
 import {ProgressBar} from "../ProgressBar/ProgressBar";
 import {ChatBox} from "./widgets/ChatBox";
+import {useNavigate} from "react-router-dom";
 
 export const ChatForm = () => {
     const { photo } = usePhoto();
+    const navigate = useNavigate();
+
+    const handleReadyClick = () => {
+        navigate('/qr');
+    };
 
     return (
         <div className="container">
@@ -26,7 +32,7 @@ export const ChatForm = () => {
                     каких-либо целях. Все данные конфиденциальны и автоматически
                     удаляются после генерации ответа.
                 </p>
-                <button className="ready-btn">ГОТОВО!</button>
+                <button className="ready-btn" onClick={handleReadyClick}>ГОТОВО!</button>
             </div>
         </div>
     );
