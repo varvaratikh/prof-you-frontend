@@ -39,23 +39,26 @@ body {
   color: var(--text-color);
 }
 
-.result_container{
-  flex-direction: row;
+.result_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
 .profession{
-  width: 461px;
-  height: 604px;
+  width: 421px;
+  height: 570px;
   background: rgba(29, 29, 29, 0.5);
   box-shadow: 0px 8px 13.2px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(51.05px);
   border-radius: 30px;
-  margin-bottom: 31px;
+  margin-bottom: 84px;
 }
 
 .qr{
-  width: 575px;
-  height: 792px;
+  width: 510px;
+  height: 655px;
   left: 931px;
   top: 167px;
   background: rgba(29, 29, 29, 0.5);
