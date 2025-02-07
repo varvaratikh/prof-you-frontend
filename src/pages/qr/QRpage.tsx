@@ -1,4 +1,5 @@
 import {Back} from "../../images/Back";
+import './qr.scss'
 
 export const QRpage = () => {
     return(
@@ -11,6 +12,14 @@ export const QRpage = () => {
                     Proff
                 </span>
                 You
+            </div>
+            <div className="result_container">
+                <div className="profession">
+
+                </div>
+                <div className="qr">
+
+                </div>
             </div>
         </div>
     )
