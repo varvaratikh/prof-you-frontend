@@ -54,6 +54,22 @@ body {
   backdrop-filter: blur(51.05px);
   border-radius: 30px;
   margin-bottom: 84px;
+  position: relative;
+}
+
+.button_cool{
+  cursor: pointer;
+  border: none;
+  //width: 375px;
+  display: block;
+  background: var(--button-bg-color);
+  box-shadow: 0 8px 13.2px rgba(0, 0, 0, 0.25);
+  border-radius: 21px;
+  font-weight: var(--font-weight-bold);
+  color: var(--button-text-color);
+  font-size: 1.5rem;
+  font-family: 'Dela Gothic One', serif;
+  padding: 20px 30px;
 }
 
 .qr{
