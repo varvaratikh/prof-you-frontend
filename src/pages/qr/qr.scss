@@ -63,6 +63,52 @@ body {
   border-radius: 30px;
 }
 
+.photos {
+  border-radius: 50px;
+  width: 100%;
+  max-width: 360px;
+  transform: scaleX(-1);
+  padding: 30px;
+}
+
+.your{
+  font-family: 'Dela Gothic One', serif;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 46px;
+  color: #FFFFFF;
+  margin-top: -8px;
+  padding-left: 30px;
+}
+
+.profess{
+  font-family: 'Dela Gothic One', serif;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 46px;
+  color: #00FF6A;
+}
+
+.text{
+  font-family: 'Inter', serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 27px;
+  color: #FFFFFF;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-top: -8px;
+}
+
+.text_green{
+  font-family: 'Inter', serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 29px;
+  color: #00FF6A;
+}
+
 .button_cool {
   cursor: pointer;
   border: none;
