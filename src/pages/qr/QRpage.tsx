@@ -22,15 +22,13 @@ export const QRpage = () => {
                 You
             </div>
             <div className="result_container">
-                <div className="profession">
+                <div className="left_container">
+                    <div className="profession"></div>
+                    <button className="button_cool" onClick={handleEndClick}>
+                        КРУТО!
+                    </button>
                 </div>
-
-                <button className="button_cool" onClick={handleEndClick}>
-                    КРУТО!
-                </button>
-
-                <div className="qr">
-                </div>
+                <div className="qr"></div>
             </div>
         </div>
     )
