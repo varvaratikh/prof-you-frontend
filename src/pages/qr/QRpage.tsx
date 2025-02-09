@@ -1,8 +1,11 @@
-import {Back} from "../../images/Back";
 import {useNavigate} from "react-router-dom";
+import {usePhoto} from "../../context/PhotoContext";
+
+import {Back} from "../../images/Back";
+// @ts-ignore
+import qr from '../../images/Qr.png';
 
 import './qr.scss'
-import {usePhoto} from "../../context/PhotoContext";
 
 export const QRpage = () => {
     const { photo } = usePhoto();
@@ -44,7 +47,15 @@ export const QRpage = () => {
                         КРУТО!
                     </button>
                 </div>
-                <div className="qr"></div>
+
+                <div className="qr">
+                    <img src={qr} alt="QR code" className="qr_photo"/>
+
+                    <p className="scan">
+                        <span className="scan_green">Сканируйте QR </span>
+                        код, чтобы сохранить и поделиться результатом!
+                    </p>
+                </div>
             </div>
         </div>
     )

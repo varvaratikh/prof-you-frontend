@@ -132,3 +132,28 @@ body {
   backdrop-filter: blur(51.05px);
   border-radius: 30px;
 }
+
+.qr_photo{
+  width: 460px;
+  height: 460px;
+  border-radius: 36px;
+  padding: 25px;
+}
+
+.scan{
+  font-family: 'Dela Gothic One', serif;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 36px;
+  color: #FFFFFF;
+  padding: 25px;
+  margin-top: -32px;
+}
+
+.scan_green{
+  font-family: 'Dela Gothic One', serif;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 36px;
+  color: #00FF6A;
+}
