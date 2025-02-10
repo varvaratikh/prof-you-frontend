@@ -6,6 +6,7 @@ import {Back} from "../../images/Back";
 import qr from '../../images/Qr.png';
 
 import './qr.scss'
+import {Button} from "../../components/button/Button";
 
 export const QRpage = () => {
     const { photo } = usePhoto();
@@ -43,9 +44,7 @@ export const QRpage = () => {
 
                     </div>
 
-                    <button className="button_cool" onClick={handleEndClick}>
-                        КРУТО!
-                    </button>
+                    <Button text="КРУТО!" onClick={handleEndClick} className="button_cool" />
                 </div>
 
                 <div className="qr">

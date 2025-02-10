@@ -3,6 +3,7 @@ import './ MainCard.scss';
 import { Back } from "../../images/Back";
 import { useNavigate } from "react-router-dom";
 import { usePhoto } from "../../context/PhotoContext";
+import {Button} from "../button/Button";
 
 const MainCard = () => {
     const videoRef = useRef<HTMLVideoElement | null>(null);
@@ -79,7 +80,7 @@ const MainCard = () => {
                     <p className="text-section__note">
                         *Ваше фото не будет сохранено или использовано в каких-либо целях. Все данные конфиденциальны и автоматически удаляются после генерации ответа.
                     </p>
-                    <button onClick={handleReadyClick} className="button button-ready">ГОТОВО!</button>
+                    <Button text="ГОТОВО!" onClick={handleReadyClick} className="button button-ready" />
                 </div>
             </div>
         </div>
