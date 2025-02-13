@@ -15,7 +15,7 @@ export const ProgressBar: React.FC<ProgressBarProps> = ({ progress }) => {
     );
 };
 
-const ChatWithProgress = () => {
+export const ChatWithProgress = () => {
     const [progress, setProgress] = useState(0);
     const totalQuestions = 10;
 
@@ -30,5 +30,3 @@ const ChatWithProgress = () => {
         </div>
     );
 };
-
-export default ChatWithProgress;

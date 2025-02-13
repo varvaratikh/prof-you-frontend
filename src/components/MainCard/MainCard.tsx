@@ -4,28 +4,34 @@ import { Back } from "../../images/Back";
 import { useNavigate } from "react-router-dom";
 import { usePhoto } from "../../context/PhotoContext";
 import {Button} from "../button/Button";
-
-const MainCard = () => {
+export const MainCard = () => {
     const videoRef = useRef<HTMLVideoElement | null>(null);
     const canvasRef = useRef<HTMLCanvasElement | null>(null);
     const navigate = useNavigate();
     const { photo, setPhoto } = usePhoto();
 
+    const startCamera = async () => {
+        try {
+            const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+            if (videoRef.current) {
+                videoRef.current.srcObject = stream;
+            } else {
+                console.error("Видео элемент не найден.");
+            }
+        } catch (error) {
+            console.error("Ошибка доступа к камере: ", error);
+        }
+    };
+
     useEffect(() => {
-        const startCamera = async () => {
-            try {
-                const stream = await navigator.mediaDevices.getUserMedia({ video: true });
-                if (videoRef.current) {
-                    videoRef.current.srcObject = stream;
-                } else {
-                    console.error("Видео элемент не найден.");
-                }
-            } catch (error) {
-                console.error("Ошибка доступа к камере: ", error);
+        startCamera();
+
+        return () => {
+            if (videoRef.current?.srcObject) {
+                const stream = videoRef.current.srcObject as MediaStream;
+                stream.getTracks().forEach(track => track.stop());
             }
         };
-
-        startCamera();
     }, []);
 
     const takePhoto = () => {
@@ -45,6 +51,11 @@ const MainCard = () => {
         navigate('/chat');
     };
 
+    const handleRetakeClick = () => {
+        setPhoto(null);
+        startCamera();
+    };
+
     return (
         <div>
             <div className="image">
@@ -61,12 +72,13 @@ const MainCard = () => {
                     {!photo ? (
                         <div>
                             <video ref={videoRef} autoPlay className="image-section__video"></video>
-                            <button onClick={takePhoto} className="button_photo">Сфотографироваться</button>
+                            <Button text="Сфотографироваться" onClick={takePhoto} className="button_photo"/>
                         </div>
                     ) : (
                         <div>
                             <img src={photo} alt="Снимок" className="image-section__photo" />
-                            <button onClick={() => setPhoto(null)} className="button_photo_2">Снять ещё</button>
+                            <Button text="Снять ещё" onClick={handleRetakeClick} className="button_photo_2"/>
+
                         </div>
                     )}
                     <canvas ref={canvasRef} style={{ display: 'none' }}></canvas>
@@ -86,5 +98,3 @@ const MainCard = () => {
         </div>
     );
 };
-
-export default MainCard;
