@@ -1,6 +1,8 @@
 import {Send} from "lucide-react";
 import {useState} from "react";
-import '../chatForm.scss'
+import '../chatForm.scss';
+
+//TODO: сделать, чтобы при отправке новых сообщений окно не уползало вниз
 
 export const ChatBox = () => {
 
@@ -22,6 +24,13 @@ export const ChatBox = () => {
         setInputValue('');
     };
 
+    const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            handleSend();
+        }
+    };
+
     return(
         <div className="chat-box">
             <div className="messages-container">
@@ -38,6 +47,7 @@ export const ChatBox = () => {
                     type="text"
                     value={inputValue}
                     onChange={(e) => setInputValue(e.target.value)}
+                    onKeyDown={handleKeyPress}
                     placeholder="Write a message"
                     className="chat-input"
                 />
