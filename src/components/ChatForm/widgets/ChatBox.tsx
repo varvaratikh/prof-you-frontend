@@ -9,11 +9,11 @@ export const ChatBox = () => {
     const botAvatar = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fcakeshop.com.ua%2Fru%2Fproduct%2Fvafelnaya-kartinka-gubka-bob-2%2F&psig=AOvVaw3TqMH6JFAEv-dY4wuGmDOl&ust=1738754113258000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCIiPkfzxqYsDFQAAAAAdAAAAABAE";
     const userAvatar = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.facebook.com%2Fvaysyper%2F&psig=AOvVaw2e1ynFTKTsdHJoaNvAdlne&ust=1738754135588000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCOjgwZfyqYsDFQAAAAAdAAAAABAJ";
 
-    // const [messages, setMessages] = useState([
-    //     { id: 1, text: 'Привет! Меня зовут Михаил :) Я прошу тебя ответить на пару вопросов.', sender: 'bot', avatar: botAvatar },
-    //     { id: 2, text: 'На сколько ты оцениваешь свои знания по математике шкале от 1 до 10', sender: 'bot', avatar: botAvatar },
-    //     { id: 3, text: '100', sender: 'user', avatar: userAvatar },
-    // ]);
+    const [messages, setMessages] = useState([
+        { id: 1, text: 'Привет! Меня зовут Михаил :) Я прошу тебя ответить на пару вопросов.', sender: 'bot', avatar: botAvatar },
+        { id: 2, text: 'На сколько ты оцениваешь свои знания по математике шкале от 1 до 10', sender: 'bot', avatar: botAvatar },
+        { id: 3, text: '100', sender: 'user', avatar: userAvatar },
+    ]);
 
     const [inputValue, setInputValue] = useState('');
 
@@ -54,6 +54,10 @@ export const ChatBox = () => {
                 <button onClick={handleSend}>
                     <Send size={20} />
                 </button>
+            </div>
+
+            <div className="chat-index">
+
             </div>
         </div>
     )
