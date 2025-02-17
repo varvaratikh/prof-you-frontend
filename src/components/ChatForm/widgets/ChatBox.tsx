@@ -55,10 +55,6 @@ export const ChatBox = () => {
                     <Send size={20} />
                 </button>
             </div>
-
-            <div className="chat-index">
-
-            </div>
         </div>
     )
 }
