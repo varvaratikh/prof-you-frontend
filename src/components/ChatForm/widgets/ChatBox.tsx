@@ -1,10 +1,10 @@
 import {Send} from "lucide-react";
-import {useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import '../chatForm.scss';
 
-//TODO: сделать, чтобы при отправке новых сообщений окно не уползало вниз
-
 export const ChatBox = () => {
+
+    const messagesEndRef = useRef<HTMLDivElement | null>(null);
 
     const botAvatar = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fcakeshop.com.ua%2Fru%2Fproduct%2Fvafelnaya-kartinka-gubka-bob-2%2F&psig=AOvVaw3TqMH6JFAEv-dY4wuGmDOl&ust=1738754113258000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCIiPkfzxqYsDFQAAAAAdAAAAABAE";
     const userAvatar = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.facebook.com%2Fvaysyper%2F&psig=AOvVaw2e1ynFTKTsdHJoaNvAdlne&ust=1738754135588000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCOjgwZfyqYsDFQAAAAAdAAAAABAJ";
@@ -31,6 +31,10 @@ export const ChatBox = () => {
         }
     };
 
+    useEffect(() => {
+        messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    }, [messages]);
+
     return(
         <div className="chat-box">
             <div className="messages-container">
@@ -41,6 +45,7 @@ export const ChatBox = () => {
                         {msg.sender === 'user' && <img src={msg.avatar} alt="user" className="avatar" />}
                     </div>
                 ))}
+                <div ref={messagesEndRef} />
             </div>
             <div className="input-container">
                 <input
@@ -52,7 +57,7 @@ export const ChatBox = () => {
                     className="chat-input"
                 />
                 <button onClick={handleSend}>
-                    <Send size={20} />
+                    <Send size={20} className="icon"/>
                 </button>
             </div>
         </div>

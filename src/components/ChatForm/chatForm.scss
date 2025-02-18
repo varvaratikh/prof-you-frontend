@@ -105,6 +105,11 @@
   box-shadow: inset -3px 4px 14.4px 1px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(51.05px);
   color: white;
+  font-size: 14px;
+}
+
+.icon{
+  color: rgba(197, 197, 197, 0.94);
 }
 
 .input-container button {
@@ -158,7 +163,7 @@
   width: 643px;
   font-family: 'Inter', serif;
   font-weight: 300;
-  font-size: 17px;
+  font-size: 14px;
   line-height: 19px;
   color: rgba(255, 255, 255, 0.55);
   margin-left: 10px;
