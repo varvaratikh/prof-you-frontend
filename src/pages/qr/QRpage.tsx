@@ -11,7 +11,7 @@ import {PhotoResult} from "../../widgets/PhotoResult";
 import {QRCode} from "../../widgets/QRCode";
 
 export const QRpage = () => {
-    const { photo } = usePhoto();
+    const { photo, prediction } = usePhoto();
     const navigate = useNavigate();
 
     const handleEndClick = () => {
@@ -28,7 +28,7 @@ export const QRpage = () => {
             </div>
             <div className="result_container">
                 <div className="left_container">
-                    <PhotoResult photo={photo} />
+                    <PhotoResult photo={photo} prediction={prediction} />
                     <Button text="КРУТО!" onClick={handleEndClick} className="button_cool" />
                 </div>
                 <QRCode qrImage={qr} />

@@ -15,22 +15,22 @@
 </g>
 </g>
 <defs>
-<filter id="filter0_f_14_17" x="-626.687" y="-293.188" width="1793.54" height="976.755" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_f_14_17" x="-626.687" y="-293.188" width="1793.54" height="976.755" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
 <feGaussianBlur stdDeviation="25" result="effect1_foregroundBlur_14_17"/>
 </filter>
-<filter id="filter1_f_14_17" x="966.319" y="-112.3" width="1557.61" height="1181.55" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter1_f_14_17" x="966.319" y="-112.3" width="1557.61" height="1181.55" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
 <feGaussianBlur stdDeviation="25" result="effect1_foregroundBlur_14_17"/>
 </filter>
-<filter id="filter2_f_14_17" x="-1113.45" y="649.871" width="1672.46" height="994.913" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter2_f_14_17" x="-1113.45" y="649.871" width="1672.46" height="994.913" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
 <feGaussianBlur stdDeviation="25" result="effect1_foregroundBlur_14_17"/>
 </filter>
-<filter id="filter3_f_14_17" x="280.526" y="814.095" width="1776.11" height="930.137" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter3_f_14_17" x="280.526" y="814.095" width="1776.11" height="930.137" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
 <feGaussianBlur stdDeviation="25" result="effect1_foregroundBlur_14_17"/>

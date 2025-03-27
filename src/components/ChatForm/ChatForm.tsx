@@ -19,12 +19,19 @@ export const ChatForm = () => {
             <div className="content-wrapper">
                 <ChatBox/>
                 <div className="photo-analysis">
-                    {photo ? (
-                        <img src={photo} alt="Снимок" className="photo" />
-                    ) : (
-                        <div className="photo" />
-                    )}
-                    <ProgressBar progress={90}/>
+                    <div className="photo-container">
+                        {photo ? (
+                            <>
+                                <img src={photo} alt="Снимок" className="photo" />
+                                <div className="loader-overlay">
+                                    <div className="loader"></div>
+                                </div>
+                            </>
+                        ) : (
+                            <div className="photo" />
+                        )}
+                    </div>
+                    <ProgressBar progress={50}/>
                 </div>
             </div>
             <div className="test-footer">

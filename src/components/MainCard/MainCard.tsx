@@ -4,11 +4,13 @@ import { Back } from "../../images/Back";
 import { useNavigate } from "react-router-dom";
 import { usePhoto } from "../../context/PhotoContext";
 import {Button} from "../button/Button";
+import {sendPhotoToBackend} from "../../api/mainCard.api";
+
 export const MainCard = () => {
     const videoRef = useRef<HTMLVideoElement | null>(null);
     const canvasRef = useRef<HTMLCanvasElement | null>(null);
     const navigate = useNavigate();
-    const { photo, setPhoto } = usePhoto();
+    const { photo, setPhoto, prediction, setPrediction } = usePhoto();
 
     const startCamera = async () => {
         try {
@@ -34,7 +36,7 @@ export const MainCard = () => {
         };
     }, []);
 
-    const takePhoto = () => {
+    const takePhoto = async () => {
         if (canvasRef.current && videoRef.current) {
             const context = canvasRef.current.getContext('2d');
             if (context) {
@@ -43,6 +45,14 @@ export const MainCard = () => {
                 context.drawImage(videoRef.current, 0, 0, canvasRef.current.width, canvasRef.current.height);
                 const imageData = canvasRef.current.toDataURL('image/png');
                 setPhoto(imageData);
+
+                try {
+                    const predictionResult = await sendPhotoToBackend(imageData);
+                    setPrediction(predictionResult);
+                } catch (error) {
+                    console.error("Ошибка при отправке фото:", error);
+                    setPrediction("Ошибка определения профессии");
+                }
             }
         }
     };
