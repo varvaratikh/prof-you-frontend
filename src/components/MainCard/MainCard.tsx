@@ -58,7 +58,7 @@ export const MainCard = () => {
     };
 
     const handleReadyClick = () => {
-        navigate('/chat');
+        navigate('/load');
     };
 
     const handleRetakeClick = () => {

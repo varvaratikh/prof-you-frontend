@@ -1,9 +1,8 @@
+import './load.scss';
 import {Back} from "assets/images/Back";
-import { ChatForm } from "../../components/ChatForm/ChatForm";
-import './chat.scss'
+import {LoadCard} from "../../widgets/LoadCard";
 
-export const Chat = () => {
-
+export const Load = () => {
     return(
         <div>
             <div className="image">
@@ -15,7 +14,7 @@ export const Chat = () => {
                 </span>
                 You
             </div>
-            <ChatForm />
+            <LoadCard />
         </div>
     )
 }
