@@ -1,9 +1,9 @@
 import {useNavigate} from "react-router-dom";
 import {usePhoto} from "../../context/PhotoContext";
 
-import {Back} from "../../images/Back";
+import {Back} from "assets/images/Back";
 // @ts-ignore
-import qr from '../../images/Qr.png';
+import qr from 'assets/images/Qr.png';
 
 import './qr.scss'
 import {Button} from "../../components/button/Button";

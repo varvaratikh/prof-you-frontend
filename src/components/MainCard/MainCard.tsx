@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import './ MainCard.scss';
-import { Back } from "../../images/Back";
+import { Back } from "assets/images/Back";
 import { useNavigate } from "react-router-dom";
 import { usePhoto } from "../../context/PhotoContext";
 import {Button} from "../button/Button";

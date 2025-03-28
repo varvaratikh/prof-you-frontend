@@ -1,4 +1,4 @@
-import {Back} from "../../images/Back";
+import {Back} from "assets/images/Back";
 import { ChatForm } from "../../components/ChatForm/ChatForm";
 import './chat.scss'
 
