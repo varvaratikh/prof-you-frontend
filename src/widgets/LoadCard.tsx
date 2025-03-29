@@ -26,7 +26,7 @@ export const LoadCard = () => {
                     </div>
                     <ProgressBar duration={10} />
 
-                    <div style={{ backgroundColor: '#0a0a0a', padding: '20px', height: '100vh' }}>
+                    <div style={{ padding: '20px', height: '50px' }}>
                         <ComplimentText messages={['У тебя очень красивые очки!', 'Ты сегодня прекрасно выглядишь!', 'Твоя улыбка заряжает!']} />
                     </div>
 

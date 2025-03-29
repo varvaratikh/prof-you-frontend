@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
+// @ts-ignore
+import example from '../../assets/images/pasha.jpg';
+
 import './compliment.scss';
 
 interface ComplimentTextProps {
@@ -20,6 +23,9 @@ export const ComplimentText: React.FC<ComplimentTextProps> = ({ messages, interv
 
     return (
         <div className="cube-container">
+
+            <img className="pasha_photo" src={example}/>
+
             <div className="cube-text">
                 {messages.map((message, index) => (
                     <div
