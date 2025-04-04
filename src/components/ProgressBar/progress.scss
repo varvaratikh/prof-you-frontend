@@ -14,7 +14,7 @@
 .progress-bar {
   background-color: var(--button-bg-color);
   width: 430px;
-  height: 63%;
+  height: 69%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -23,7 +23,7 @@
   font-size: 20px;
   line-height: 26px;
   color: #000000;
-  margin-top: 1.8px;
+  margin-top: -2px;
   border-radius: 20px;
   transition: width 0.1s ease-in-out;
 }
