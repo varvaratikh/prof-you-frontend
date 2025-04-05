@@ -6,9 +6,10 @@ const PhotoContext = createContext<PhotoContextType | undefined>(undefined);
 export const PhotoProvider = ({ children }: { children: ReactNode }) => {
     const [photo, setPhoto] = useState<string | null>(null);
     const [prediction, setPrediction] = useState<string | null>(null);
+    const [gender, setGender] = useState<string | null>(null);
 
     return (
-        <PhotoContext.Provider value={{ photo, setPhoto, prediction, setPrediction }}>
+        <PhotoContext.Provider value={{ photo, setPhoto, prediction, setPrediction, gender, setGender }}>
             {children}
         </PhotoContext.Provider>
     );

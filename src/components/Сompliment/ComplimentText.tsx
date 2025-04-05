@@ -1,41 +1,49 @@
-import React, { useState, useEffect } from 'react';
-
+import React, { useEffect, useState } from 'react';
 // @ts-ignore
-import example from '../../assets/images/pasha.jpg';
-
+import image from '../../assets/images/image.png';
 import './compliment.scss';
+import {usePhoto} from "../../context/PhotoContext";
+import {complimentsForMen, complimentsForWomen} from "../../constants/compliment";
 
-interface ComplimentTextProps {
-    messages: string[];
-    interval?: number;
-}
+export const ComplimentCube = () => {
+    const { gender } = usePhoto();
+    const compliments = gender === 'Man' ? complimentsForMen : complimentsForWomen;
 
-export const ComplimentText: React.FC<ComplimentTextProps> = ({ messages, interval = 2000 }) => {
-    const [currentIndex, setCurrentIndex] = useState(0);
+    const [currentCompliment, setCurrentCompliment] = useState('');
+    const [previousIndex, setPreviousIndex] = useState<number | null>(null);
+    const [animationKey, setAnimationKey] = useState(0);
 
     useEffect(() => {
-        const timer = setInterval(() => {
-            setCurrentIndex((prevIndex) => (prevIndex + 1) % messages.length);
-        }, interval);
+        const getRandomIndex = () => {
+            let index;
+            do {
+                index = Math.floor(Math.random() * compliments.length);
+            } while (index === previousIndex);
+            return index;
+        };
 
-        return () => clearInterval(timer);
-    }, [messages, interval]);
+        const updateCompliment = () => {
+            const newIndex = getRandomIndex();
+            setCurrentCompliment(compliments[newIndex]);
+            setPreviousIndex(newIndex);
+            setAnimationKey(prev => prev + 1);
+        };
+
+        const interval = setInterval(updateCompliment, 2500);
+
+        updateCompliment();
+
+        return () => clearInterval(interval);
+    }, [gender]);
 
     return (
         <div className="cube-container">
 
-            <img className="pasha_photo" src={example}/>
+            <img className="photo-compliment" src={image}/>
 
-            <div className="cube-text">
-                {messages.map((message, index) => (
-                    <div
-                        key={index}
-                        className={`text-item ${index === currentIndex ? 'active' : ''}`}
-                    >
-                        {message}
-                    </div>
-                ))}
+            <div key={animationKey} className="cube-text">
+                {currentCompliment}
             </div>
         </div>
     );
-};
+}

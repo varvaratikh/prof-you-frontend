@@ -12,9 +12,15 @@ export const sendPhotoToBackend = async (imageData: string) => {
             }
         });
 
-        return response.data.predict;
+        return {
+            predict: response.data.predict,
+            gender: response.data.gender
+        };
     } catch (error) {
         console.error('Ошибка при отправке фото:', error);
-        // return 'Не удалось определить профессию';
+        return {
+            predict: 'Не удалось определить профессию',
+            gender: null
+        };
     }
 };

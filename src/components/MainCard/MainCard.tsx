@@ -10,7 +10,7 @@ export const MainCard = () => {
     const videoRef = useRef<HTMLVideoElement | null>(null);
     const canvasRef = useRef<HTMLCanvasElement | null>(null);
     const navigate = useNavigate();
-    const { photo, setPhoto, prediction, setPrediction } = usePhoto();
+    const { photo, setPhoto, prediction, setPrediction, setGender } = usePhoto();
 
     const startCamera = async () => {
         try {
@@ -48,7 +48,8 @@ export const MainCard = () => {
 
                 try {
                     const predictionResult = await sendPhotoToBackend(imageData);
-                    setPrediction(predictionResult);
+                    setPrediction(predictionResult.predict);
+                    setGender(predictionResult.gender);
                 } catch (error) {
                     console.error("Ошибка при отправке фото:", error);
                     setPrediction("Ошибка определения профессии");
