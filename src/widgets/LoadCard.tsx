@@ -24,7 +24,7 @@ export const LoadCard = () => {
                             <div className="photo" />
                         )}
                     </div>
-                    <ProgressBar duration={15} />
+                    <ProgressBar duration={10} />
 
                     <div style={{ padding: '20px', height: '50px' }}>
                         <ComplimentCube />
