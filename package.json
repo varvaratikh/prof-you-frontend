@@ -7,11 +7,14 @@
     "axios": "^1.8.4",
     "cra-template-typescript": "1.2.0",
     "lucide-react": "^0.474.0",
+    "qr-code-styling": "^1.9.2",
+    "qrcode.react": "^4.2.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.1.2",
     "react-scripts": "5.0.1",
-    "sass": "^1.83.4"
+    "sass": "^1.83.4",
+    "uuid": "^11.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -38,6 +41,7 @@
     ]
   },
   "devDependencies": {
+    "@types/qrcode.react": "^1.0.5",
     "@types/react-dom": "^19.0.3"
   },
   "proxy": "http://127.0.0.1:8000"

@@ -1,12 +1,16 @@
-import '../pages/qr/qr.scss'
+import { QRCodeSVG } from 'qrcode.react';
+import '../pages/qr/qr.scss';
 
 interface QRCodeProps {
-    qrImage: string;
+    value: string;
 }
 
-export const QRCode: React.FC<QRCodeProps> = ({ qrImage }) => (
+export const QRCode: React.FC<QRCodeProps> = ({ value }) => (
     <div className="qr">
-        <img src={qrImage} alt="QR code" className="qr_photo" />
+        <QRCodeSVG value={value} size={400} bgColor="#1d1d1d"
+                   fgColor="#00FF6A"
+                   includeMargin={true}
+                   className="qr_svg"/>
         <p className="scan">
             <span className="scan_green">Сканируйте QR </span>код, чтобы сохранить и поделиться результатом!
         </p>

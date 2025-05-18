@@ -8,11 +8,17 @@ import qr from 'assets/images/Qr.png';
 import './qr.scss'
 import {Button} from "../../components/button/Button";
 import {PhotoResult} from "../../widgets/PhotoResult";
-import {QRCode} from "../../widgets/QRCode";
+
+import { v4 as uuidv4 } from 'uuid';
+import {StyledQRCode} from "../../widgets/StyledQRCode";
 
 export const QRpage = () => {
     const { photo, prediction } = usePhoto();
     const navigate = useNavigate();
+
+    const resultId = uuidv4();
+    const baseUrl = window.location.origin;
+    const qrLink = `${baseUrl}/result/${resultId}`;
 
     const handleEndClick = () => {
         navigate('/');
@@ -31,7 +37,7 @@ export const QRpage = () => {
                     <PhotoResult photo={photo} prediction={prediction} />
                     <Button text="КРУТО!" onClick={handleEndClick} className="button_cool" />
                 </div>
-                <QRCode qrImage={qr} />
+                <StyledQRCode value={qrLink} />
             </div>
         </div>
     );
