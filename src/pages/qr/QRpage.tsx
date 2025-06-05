@@ -11,6 +11,7 @@ import {PhotoResult} from "../../widgets/PhotoResult";
 
 import { v4 as uuidv4 } from 'uuid';
 import {StyledQRCode} from "../../widgets/StyledQRCode";
+import {useEffect} from "react";
 
 export const QRpage = () => {
     const { photo, prediction } = usePhoto();
@@ -23,6 +24,13 @@ export const QRpage = () => {
     const handleEndClick = () => {
         navigate('/');
     };
+
+    useEffect(() => {
+        if (photo && prediction) {
+            const result = { photo, prediction };
+            localStorage.setItem(resultId, JSON.stringify(result));
+        }
+    }, [photo, prediction, resultId]);
 
     return (
         <div>

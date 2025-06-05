@@ -1,4 +1,5 @@
 import '../pages/qr/qr.scss'
+import {JSX} from "react";
 
 
 interface PhotoResultProps {
@@ -6,7 +7,7 @@ interface PhotoResultProps {
     prediction: string | null;
 }
 
-export const PhotoResult: React.FC<PhotoResultProps> = ({ photo, prediction }) => {
+export const PhotoResult: ({photo, prediction}: { photo: any; prediction: any }) => JSX.Element = ({ photo, prediction }) => {
     const profession = prediction ? prediction.replace('Рекомендуемая профессия: ', '') : 'Неизвестно';
 
     return (
