@@ -44,5 +44,5 @@
     "@types/qrcode.react": "^1.0.5",
     "@types/react-dom": "^19.0.3"
   },
-  "proxy": "http://127.0.0.1:8000"
+  "proxy": "http://127.0.0.1:3000"
 }
