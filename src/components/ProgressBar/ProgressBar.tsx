@@ -16,17 +16,23 @@ export const ProgressBar: React.FC<ProgressBarProps> = ({ duration = 10 }) => {
 
         const timer = setInterval(() => {
             setProgress((prev) => {
-                if (prev >= 100) {
+                const next = prev + step;
+                if (next >= 100) {
                     clearInterval(timer);
-                    navigate('/qr');
                     return 100;
                 }
-                return prev + step;
+                return next;
             });
         }, interval);
 
         return () => clearInterval(timer);
     }, [duration]);
+
+    useEffect(() => {
+        if (progress >= 100) {
+            navigate('/qr');
+        }
+    }, [progress]);
 
     return (
         <div className="progress-container">

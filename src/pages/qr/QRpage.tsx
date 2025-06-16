@@ -26,11 +26,11 @@ export const QRpage = () => {
     };
 
     useEffect(() => {
-        if (photo && prediction) {
-            const result = { photo, prediction };
+        if (prediction) {
+            const result = { prediction };
             localStorage.setItem(resultId, JSON.stringify(result));
         }
-    }, [photo, prediction, resultId]);
+    }, [prediction, resultId]);
 
     return (
         <div>
