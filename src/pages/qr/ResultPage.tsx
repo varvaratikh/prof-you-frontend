@@ -33,8 +33,7 @@ export const ResultPage = () => {
                 <p className="yours">Вы <span className="profes">{profession}</span>!</p>
                 <h3 className="texts">
                     На основе вашего фото и результатов пройденного теста, наш ИИ предположил, что вы могли бы стать{' '}
-                    <span className="text_greens">превосходным {profession}</span>
-                    <span className="text_greens">'ом</span>
+                    <span className="text_greens">превосходным {profession} <span className="text_greens">'ом</span></span>
                 </h3>
             </div>
         </div>
